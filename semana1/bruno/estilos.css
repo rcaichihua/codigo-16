@@ -1,0 +1,55 @@
+body{
+  background-color: rgb(210, 170, 247);
+}
+h1{
+  color: gray;
+  text-decoration: underline;
+}
+h2{
+  color: green;
+  font-size: 32px;
+  font-family: "Gloria Hallelujah mio";
+}
+@font-face {
+  font-family: "Gloria Hallelujah mio";
+  /* Aquin se puede poner cualquier nombre pero es recomendable poner su nombre original*/
+  src: url(../bruno/fonts/GloriaHallelujah-Regular.ttf);
+}
+#cabecera1{
+  color: red;
+  font-family: "Gloria Hallelujah mio";
+    font-size: 40px;
+}
+.parrafos_rojos{
+  color:red;
+  font-weight: 500;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 10px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+td {
+  font-size: 32px;
+  padding: 20px;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+}

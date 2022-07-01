@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aprobado {
+        color: blue;
+      }
+      .desaprobado {
+        color: red;
+      }
+      .frio {
+        color: blue;
+      }
+      .templado {
+        color: lightblue;
+      }
+      .calido {
+        color: brown;
+      }
+      .tropical {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Martes 21 de Junio</h1>
+    <h2>Condicionales + Document.Write()</h2>
+    <hr />
+  </body>
+  <script type="text/javascript">
+    document.write("<h3>Notas</h3>");
+
+    let nota = 10; //prompt("Ingrese nota");
+    nota = Number(nota);
+
+    if (!isNaN(nota)) {
+      if (nota > 10 && nota <= 20) {
+        document.write("<h1 class='aprobado'>" + nota + "</h3>");
+        document.write("<h3>Buena Nota</h3>");
+      } else if (nota <= 10) {
+        console.log(nota);
+        document.write("<h1 class='desaprobado'>" + nota + "</h3>");
+        document.write("<h3 class='desaprobado'>Mala Nota</h3>");
+      } else {
+        document.write("<h3>Ingrese una nota valida menor o igual a 20</h3>");
+      }
+    } else {
+      document.write("<h3>Ingrese solo numeros</h3>");
+    }
+    let suma = (sum) => sum + 5;
+    console.log(suma(2));
+    document.write("<hr/>");
+    /*Triangulos*/
+    document.write("<h3>Angulos</h3>");
+    let angulo = 320;
+    document.write("<p>" + angulo + "</p>");
+    document.write("<hr/>");
+    if (angulo == 0) {
+      document.write("<h3>Angulo nulo</h3>");
+    } else if (angulo > 0 && angulo < 90) {
+      document.write("<h3>Angulo agulo</h3>");
+    } else if (angulo == 90) {
+      document.write("<h3>Angulo recto</h3>");
+    } else if (angulo > 90 && angulo < 180) {
+      document.write("<h3>Angulo Obtuso</h3>");
+    } else if (angulo == 180) {
+      document.write("<h3>Angulo llano</h3>");
+    } else if (angulo > 180 && angulo < 360) {
+      document.write("<h3>Angulo Concavo</h3>");
+    } else if (angulo == 360) {
+      document.write("<h3>Angulo Completo</h3>");
+    } else {
+      document.write("<h3>Angulo no existe</h3>");
+    }
+    // switch (angulo) {
+    //   case 0:
+    //       document.write("<h3>Angulo nulo</h3>");
+    //     break;
+    //   case
+    //   default:
+    //     break;
+    // }
+    document.write("<hr/>");
+    document.write("<h3>temperatura</h3>");
+
+    let temperatura = 20; //prompt("Ingrese temperatura:");
+    temperatura = Number(temperatura);
+
+    // if (!isNaN(temperatura)) {
+    //   if (temperatura <= 10) {
+    //     document.write("<h1 class='frio'>" + temperatura + "</h3>");
+    //     document.write("<h3 class='frio'>Clima Frio</h3>");
+    //   } else if (temperatura >= 11 && temperatura <= 16) {
+    //     document.write("<h1 class='templado'>" + temperatura + "</h3>");
+    //     document.write("<h3 class='templado'>Clima Templado</h3>");
+    //   } else if (temperatura >= 17 && temperatura <= 24) {
+    //     document.write("<h1 class='calido'>" + temperatura + "</h3>");
+    //     document.write("<h3 class='calido'>Clima cálido</h3>");
+    //   } else if (temperatura > 24) {
+    //     document.write("<h1 class='tropical'>" + temperatura + "</h3>");
+    //     document.write("<h3 class='tropical'>Clima tropical</h3>");
+    //   }
+    // } else {
+    //   document.write("<h3>INgrese un Número</h3>");
+    // }
+    switch (!isNaN(temperatura)) {
+      case temperatura <= 10:
+        document.write("<h1 class='frio'>" + temperatura + "</h3>");
+        document.write("<h3 class='frio'>Clima Frio</h3>");
+        break;
+      case temperatura >= 11 && temperatura <= 16:
+        document.write("<h1 class='templado'>" + temperatura + "</h3>");
+        document.write("<h3 class='templado'>Clima Templado</h3>");
+        break;
+      case temperatura >= 17 && temperatura <= 24:
+        document.write("<h1 class='calido'>" + temperatura + "</h3>");
+        document.write("<h3 class='calido'>Clima cálido</h3>");
+        break;
+      case temperatura > 24:
+        document.write("<h1 class='tropical'>" + temperatura + "</h3>");
+        document.write("<h3 class='tropical'>Clima tropical</h3>");
+        break;
+    }
+    const array = [2, 24, 4, 8, 12, 2, 1, 78, 5, 10, 9, 96, 45, 444];
+    const divisibleporcuatro = array.filter((m) => m % 4 === 0);
+    console.log(divisibleporcuatro);
+  </script>
+</html>

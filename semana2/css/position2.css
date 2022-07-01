@@ -1,0 +1,37 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  /*!ojo no tiene unidad de medida */
+  z-index: 1;
+}
+/*Como activamos la opcion de usar top, left right botton
+! Recuerden para activar estos 4 opciones debemos tener una position
+! lo que importe que el 
+*/
+/*Al poner el atributo fixed convertimos al elemonto en un inline*/
+nav{
+  background-color: #333;
+}
+ul{
+  padding: 20px;
+}
+
+ul li {
+  display: inline;
+}
+
+a{
+  color: #fff;
+}
+div{
+  position: relative;
+  top: 100px;
+}
+#nosotros{
+  height: 100vh;
+  background-color: aqua;
+}

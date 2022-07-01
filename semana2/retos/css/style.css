@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.contenedor{
+  background: hsl(212, 45%, 89%);
+  height: 100vh;
+  position: relative;
+  /* border: solid red; */
+}
+
+.contenedor-interno{
+  width: 375px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 16px;
+  margin: auto;/*Con esto se centra de forma horizontal*/
+  /*inicio - centrar de otra forma */
+  /* position: absolute;
+  top: 20%;
+  left: calc(50% - 187.5px); 
+  fin */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contenedor-interno * { /*El * quiere decir que aplica a todas las etiquetas 
+  dentro de contenedor-interno*/
+  margin-top: 10px;
+}
+
+/*de un grupo de 5 <p> toma o afecta a la ultima p*/
+/* .contenedor-interno:last-child {
+  margin-bottom: 20px;
+} */
+
+img{
+  width: 345px;
+  border-radius: 16px;
+}
+
+h4{
+  width: 60%;
+  margin: auto;
+}
+
+p{
+  width: 70%;
+  margin: auto;
+}

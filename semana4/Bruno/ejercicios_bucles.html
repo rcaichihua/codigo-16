@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucles</title>
+    <style>
+      #container {
+        width: 300px;
+        min-height: 100px;
+        background-color: #ddd;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+  <script>
+    // document.getElementByTagName() lo hicimos el martes, pero casi NO SE USA.
+    // document.getElementById() HOY. SI SE USA.
+    // const div_container = document.getElementById("container");
+    // div_container.innerHTML = "<h1>Ejercicios Bucles</h1>";
+    // let suma = 0;
+    // let num2 = 0;
+    // for (let index = 17; index < 98; index++) {
+    //   let numero = index.toString();
+    //   for (const iterator of numero) {
+    //     if (iterator == "7") {
+    //       num2 = numero;
+    //       break;
+    //     } else {
+    //       num2 = 0;
+    //     }
+    //   }
+    //   suma = Number(suma) + Number(num2);
+    //   div_container.innerHTML += "<p>" + num2 + "</p>";
+    // }
+    // div_container.innerHTML += "<p>" + suma + "</p>";
+    const div_container = document.getElementById("container");
+    div_container.innerHTML = "<h1>Primos</h1>";
+
+    let tope = Number(
+      prompt("Ingrese la cantidad de numeros primos que desea")
+    );
+    div_container.innerHTML = "<h1>Hay " + tope + " numeros primos</h1>";
+
+    function isPrime(n) {
+      if (n <= 1) return false;
+      for (var i = 2; i <= n - 1; i++) if (n % i == 0) return false;
+      return true;
+    }
+    var index = 0;
+    var concatena = " ";
+
+    for (var j = 2; j < 10000; j++) {
+      if (isPrime(j)) {
+        tope = tope + j.toString() + " - ";
+        index++;
+        if (index == numero) break;
+      }
+    }
+    div_container.innerHTML += "<b>" + " " + concatena + " " + "</b>";
+  </script>
+</html>

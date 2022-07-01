@@ -1,0 +1,71 @@
+.bg-box{
+  height: 400px;
+  width: 400px;
+  background-color: red;
+/*Para mover este elemento por todo el navegador*/
+  position: relative;
+/* al agregar una position a un element este nos da la opcion de usar los sigueinte
+para que existan los de abajo debe existir un position
+top
+left
+right
+botton
+*/
+top: 100px;
+right: 100px;
+}
+/* Esta la opcion de combinar obsulute con relative */
+/* Absolute necesita de un padre que defina su entorno es decir alto y ancho */
+/* por ende relative va a funcionar como padre de obsolute */
+.padre{
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+  position: relative;
+}
+.hijo{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  position: absolute;
+  /* right: 0px;
+  bottom: 0px; */
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+
+}
+/*la clase bandera es el padre el contenedor que ocupe toda la pantalla*/
+/*vh : viewport height es una unidad de medida el rango que va de 0 al infinito*/
+/*sin embargo 100vh = alto de la pantalla*/
+.bandera{
+  /*ocupara todo el ancho de la pantalla*/
+  height: 100vh;
+  border : solid;
+  /*vamos a poner una position relative en este div*/
+  position: relative;
+}
+.green{
+  background-color: green;
+  height: 100vh;
+  width: 40%;
+  float: left; /*que empiece desde el lado izquier 40% moviendose desde la izquierda*/
+  /* position: absolute; */
+}
+.red {
+  background-color: red;
+  height: 100vh;
+  width: 60%;
+  float: right; /*que empiece desde el lado derecho 60% moviendose desde ña derecha*/
+  /* left: 30%;
+  position: absolute; */
+}
+.escudo{
+  background-image: url("../images/portugal.png");
+  height: 300px;
+  width: 300px;
+  background-size: cover; /*el cover hace que la foto ocupe el 300x300 en el caso la foto sea mas pequeña que el tamoño que le estamos dando*/
+  /* background-repeat: no-repeat; */
+  position: absolute;
+  left: calc(40% - 150px);
+  top: calc(50% - 150px);/*se cuenta el 50% viendo desde el eje "y" centrando*/
+}

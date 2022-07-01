@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <header x-data="{ open: false }" class="header">
+    <button class="header__button-nav--open" x-on:click="open = true">
+      <img src="./images/menu.png" width="50px">
+    </button>
+    <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+        <div class="nav__button" x-on:click="open = false">
+          <button class="header__button-nav--close">
+            <img src="./images/cerrar.png" width="50px">
+          </button>
+        </div>
+        <div class="header__logo1">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <ul class="nav__ul">
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="contact nav__link">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="bg-orange">
+      <h1 class="title">We are creative</h1>
+      <img src="./images/icon-arrow-down.svg" alt="" />
+    </div>
+    <!-- 2da parte -->
+    <div class="second-container">
+      <div class="child">
+        <section>
+          <h4>Transform your brand</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            numquam exercitationem id, nisi sit aliquid obcaecati, deleniti
+            impedit dolorum quaerat mollitia laudantium quia incidunt
+            voluptatem, nostrum commodi quos accusamus eius.
+          </p>
+          <a href="">Learn more</a>
+        </section>
+      </div>
+      <div class="child bg-egg"></div>
+      <div class="child bg-cup"></div>
+      <div class="child">
+        <section>
+          <h4>Transform your brand</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            numquam exercitationem id, nisi sit aliquid obcaecati, deleniti
+            impedit dolorum quaerat mollitia laudantium quia incidunt
+            voluptatem, nostrum commodi quos accusamus eius.
+          </p>
+          <a href="">Learn more</a>
+        </section>
+      </div>
+      <div class="child bg-cherry">
+        <section class="bottom">
+          <h4>Transform your brand</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            numquam exercitationem id, nisi sit aliquid obcaecati, deleniti
+            impedit dolorum quaerat mollitia laudantium quia incidunt
+            voluptatem, nostrum commodi quos accusamus eius.
+          </p>
+        </section>
+      </div>
+      <div class="child bg-orange-complete">
+        <section class="bottom">
+          <h4>Transform your brand</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            numquam exercitationem id, nisi sit aliquid obcaecati, deleniti
+            impedit dolorum quaerat mollitia laudantium quia incidunt
+            voluptatem, nostrum commodi quos accusamus eius.
+          </p>
+        </section>
+      </div>
+    </div>
+    <br />
+    <div class="titulo">
+      <h4>CLIENT TESTIMONIALS</h4>
+    </div>
+    <div class="contenedor">
+      <div>
+        <img src="./images/image-emily.jpg" alt="" class="imagen" />
+        <p class="descripcion">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          quas ab. Ipsum qui neque dolore ex alias facere veritatis perferendis.
+        </p>
+        <p class="nombres">
+          <b>Emily R.</b>
+        <p>Marketing Director</p>
+        </p>
+      </div>
+      <div>
+        <img src="./images/image-thomas.jpg" alt="" class="imagen" />
+        <p class="descripcion">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          quas ab. Ipsum qui neque dolore ex alias facere veritatis perferendis.
+        </p>
+        <p class="nombres">
+          <b>Thomas S.</b>
+        <p>Chief Operating officer</p>
+        </p>
+      </div>
+      <div>
+        <img src="./images/image-jennie.jpg" alt="" class="imagen" />
+        <p class="descripcion">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          quas ab. Ipsum qui neque dolore ex alias facere veritatis perferendis.
+        </p>
+        <p class="nombres">
+          <b>Jennie F.</b>
+        <p>Business Owner</p>
+        </p>
+      </div>
+    </div>
+    <div class="contenedor2">
+      <div class="child2 leche"></div>
+      <div class="child2 naranja"></div>
+      <div class="child2 helado"></div>
+      <div class="child2 bombom"></div>
+    </div>
+    <div class="contenedor3">
+      <div class="pie-footer">
+        <h1 class="title-footer">sunnyside</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contenedor4">
+      <div>
+        <img src="./images/icon-facebook.svg" alt="">
+      </div>
+      <div>
+        <img src="./images/icon-instagram.svg" alt="">
+      </div>
+      <div>
+        <img src="./images/icon-twitter.svg" alt="">
+      </div>
+      <div>
+        <img src="./images/icon-pinterest.svg" alt="">
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

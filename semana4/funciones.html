@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Courier New", Courier, monospace;
+    }
+    .container {
+      width: 400px;
+      min-width: 400px;
+      height: 600px;
+      background-color: rgb(94, 64, 94);
+      border-radius: 5%;
+    }
+    #input_number {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+    p {
+      color: white;
+      font-weight: 30px;
+      margin-left: 30px;
+    }
+  </style>
+  <body>
+    <!-- <input type="text" id="numero1" value="5" />
+    <input type="text" id="numero2" value="g" /> -->
+    <div class="container">
+      <input type="text" placeholder="Ingrese un número..." id="input_number" />
+      <!-- <button onclick="imprimirFactorial()" value="5">Factorial</button> -->
+      <button onclick="multiplicarPorN()" value="5">
+        Crea Tabla Multiplicar
+      </button>
+    </div>
+  </body>
+  <script src="./js/funciones.js"></script>
+</html>

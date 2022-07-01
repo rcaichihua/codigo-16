@@ -1,0 +1,96 @@
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 45px;
+  /* ! Imporante, cuando se usa el font-weight no tiene unidad de media por eso se pone 100*/
+  font-weight: 100;
+  text-decoration: underline;
+  /* * Nota:border: 
+      * 700 = bold;
+      * 900 = bolder
+  */
+}
+.parrafo {
+  font-family: 'Gloria Hallelujah', cursive;
+  /* Tamaño del texto */
+  font-size: 100px;
+  font-weight: bolder;
+}
+/*
+Hexadecimal * se usa mas
+RGB => Red Green Blue * se usa mas
+RGBA => Red Green Blue Alpha 
+alpha => Opacidad 0 - 1
+hsl => hue saturacion Lightness
+*/
+.link-a{
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  /* Quitar la linea*/
+  text-decoration: none;
+  /* Con la propiedad color: Sirve para poder cambiar el color de un texto
+      Hexadecimal: es una forma en la cual podemos aplicar un color basado en 6 digitos alfanumericos*/
+  color: rgb(168, 17, 255);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul{
+  background-color: rgb(166, 228, 233,0.3);
+  font-size: 50px;
+}
+.span-1{
+  text-decoration: line-through;
+}
+.span-2{
+  text-decoration: overline;
+}
+.span-3{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.span-4{
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+.span-5{
+  text-decoration: overline;
+  background-color: blueviolet;
+  text-decoration-color: green;
+}
+/*
+  lowercase => minusculas
+  uppercase => mayusculas
+  capitallixe => primera ñletra mayuscula
+*/
+.span-6{
+  text-decoration: underline;
+  background-color: blue;
+  color: #fff;
+  text-transform: lowercase;
+}
+
+/*
+para que css pueda leer una fuente desde un archovo tenemos que @font-face esto nos permite cargar 
+una fuente extderna y darle un nombre para su uso
+*/
+@font-face {
+  font-family: "Gloria Hallelujah mio";/* Aquin se puede poner cualquier nombre pero es recomendable poner su nombre original*/
+  src: url(../fonts/GloriaHallelujah-Regular.ttf);
+}
+.title-1{
+  font-family: "Gloria Hallelujah mio";
+  font-size: 40px;
+}
+/*
+En HTML existen 2 tipos de etiqueta
+Bloque ocupa el 100% del ancho de la pantalla
+En linea solo ocupa el cnacho que necesita
+
+<p> : Es una etiqueta en Bloque. ocupa todo el ancho
+<span> : ocupa lo que requeire , ocupa una parte
+*/
+.otras_etiquetas{
+  font-size: 32px;
+}

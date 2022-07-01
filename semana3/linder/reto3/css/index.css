@@ -1,0 +1,365 @@
+/* paso 1 quitamos margenes a todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cuando hablamos de colores en un proyecto tenemos 3 nombres como base */
+  /* primary-color: Es el color principal de la web */
+  /* secondary-color */
+  /* dark-color: */
+  /* accent-color: #333 */
+
+  /* let nombreDePersona = "Juan Peres" */
+  /* let name = "Juan Perez" */
+
+  /* !Una regla del nombre de una variable es que esta nos diga el contenido*/
+
+  /* Colors */
+  --sunglow-color: #fecb01;
+  --orange-color: #ff4d00;
+  /* Si queremos cambiar el valor de un variable por complete hacemos un refactor */
+  --white-color: #f3fcfa;
+  --brown-sugar-color: #b26244;
+  --polished-color: #63a496;
+  --capri-color: #3ebdfc;
+  --gray-color: #bab8ad;
+  /* Fonts */
+  /* ojo: Recuerden que las variables solo guardan un valor */
+  --font-fraunces: "Fraunces", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+}
+
+header {
+  background-color: var(--capri-color);
+}
+.nav__button,
+.header__button-nav--open {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+ul > li {
+  margin: 20px;
+}
+
+/* Nota cuando un elemento es un hijo directo como buena practica usamos el sibolo > */
+ul > li a {
+  font-family: var(--font-barlow);
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.contact {
+  font-family: var(--font-fraunces);
+  background-color: var(--white-color);
+  color: #000;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.bg-orange {
+  height: 60vh;
+  background: url("../images/desktop/image-header.jpg");
+  background-color: var(--capri-color);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--white-color);
+  font-family: var(--font-fraunces);
+  font-size: 2em;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.second-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container div {
+  height: 60vh;
+  width: 50%;
+}
+
+.bg-egg {
+  background: url("../images/desktop/image-transform.jpg");
+}
+
+.bg-cup {
+  background: url("../images/desktop/image-stand-out.jpg");
+}
+
+.bg-cherry {
+  background: url("../images/desktop/image-graphic-design.jpg");
+}
+
+.bg-orange-complete {
+  background: url("../images/desktop/image-photography.jpg");
+}
+
+.child {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+section h4 {
+  font-family: var(--font-fraunces);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+section p {
+  font-family: var(--font-barlow);
+  font-weight: 600;
+  color: var(--gray-color);
+  margin-bottom: 30px;
+}
+
+section a {
+  font-family: var(--font-fraunces);
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+section a:hover {
+  box-shadow: 0 4px 6px -6px var(--sunglow-color);
+  width: 115px;
+}
+
+.bottom {
+  justify-content: end;
+}
+
+.bottom h4 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.bottom p {
+  color: #000;
+}
+.imagen {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+}
+.titulo {
+  text-align: center;
+  font-size: 20px;
+  color: var(--gray-color);
+  margin: 60px;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+}
+.descripcion {
+  margin: 60px;
+  font-family: var(--font-fraunces);
+  color: gray;
+}
+.leche {
+  background: url("../images/desktop/image-gallery-milkbottles.jpg");
+}
+.naranja {
+  background: url("../images/desktop/image-gallery-orange.jpg");
+}
+.helado {
+  background: url("../images/desktop/image-gallery-cone.jpg");
+}
+.bombom {
+  background: url("../images/desktop/image-gallery-sugarcubes.jpg");
+}
+.contenedor2 {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.child2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 25%;
+}
+.contenedor3 {
+  background-color: var(--polished-color);
+}
+.pie-footer {
+  text-align: center;
+}
+.title-footer {
+  color: rgb(43, 80, 43);
+  font-weight: bold;
+  padding-top: 60px;
+  font-family: var(--font-fraunces);
+}
+.contenedor3 nav ul li {
+  color: rgb(43, 80, 43);
+  font-family: var(--font-barlow);
+}
+.contenedor4 {
+  background-color: var(--polished-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor4 div {
+  padding: 10px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 700px) {
+  .second-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bg-egg {
+    order: -1;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedor2 {
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+  }
+  .second-container div {
+    width: 100%;
+  }
+  .bg-egg {
+    width: 100%;
+  }
+  .contenedor2 div {
+    flex-wrap: wrap;
+    height: 30vh;
+    width: 50%;
+  }
+  .contenedor3 div {
+    width: 100%;
+  }
+  .bg-orange {
+    height: 300px;
+  }
+  .imagen {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin: 20px 0px 0px 0px;
+  }
+  .titulo {
+    font-size: 25px;
+    margin: 10px 0px 0px 0px;
+  }
+  .contenedor {
+    margin: 0px 0px 60px 0px;
+  }
+  .descripcion {
+    margin: 20px;
+  }
+  .title {
+    font-size: 3.1em;
+    letter-spacing: 5px;
+  }
+  /* Oculta el nav en la parte izquiera */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--capri-color);
+    transform: translateX(-100vw);
+    /* transition: 0.5s; */
+  }
+
+  /* Muestra el nav */
+  .nav--show {
+    transform: translateX(0);
+  }
+
+  .nav__button {
+    text-align: right;
+    margin: 1rem;
+  }
+  .nav__ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  ul {
+    /* display: flex; */
+    display: block;
+    list-style: none;
+  }
+  .header__logo {
+    top: 800px;
+  }
+  .nav__button,
+  .header__button-nav--open {
+    display: grid;
+  }
+  .header__button-nav--open,
+  .header__button-nav--close {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: #3498db;
+    font-size: 1.5em;
+  }
+}

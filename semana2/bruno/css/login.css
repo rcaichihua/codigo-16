@@ -1,0 +1,70 @@
+body{
+  background-color: rgb(230, 219, 219);
+}
+
+#contenedor{
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  background-color: rgb(50, 100, 179);
+  box-shadow: 5px 5px 5px;
+  border-radius: 5%;
+}
+
+#campos{
+  padding-top: 40px;
+  text-align: center;
+}
+
+.form-control {
+  margin-top: 20px;
+}
+
+#user{
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+#user:focus{
+  height: 35px;
+  background: rgb(239, 233, 233);
+}
+
+#pass {
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+#pass:focus {
+  height: 35px;
+  background: rgb(239, 233, 233);
+  transform: scale(1.2) translate(10px, 10px);
+}
+
+#submit{
+  height: 30px;
+  width: 90px;
+  background-color: rgb(12, 52, 92);
+  border-radius: 10%;
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+
+#submit:hover {
+  height: 35px;
+  width: 95px;
+  background-color: rgb(42, 81, 120);
+  border-radius: 10%;
+  color: white;
+  box-shadow: none;
+  border: 2px dotted;
+
+  transform: scale(1.1);
+}
+
+.label{
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+}

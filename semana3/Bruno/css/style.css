@@ -1,0 +1,34 @@
+#box{
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  /* transition: width 6s, height 6s, background-color 6s; */
+  transition: 6s;
+  float: left;
+}
+#box:hover{
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  transform: translateX(50px) translateY(50px);
+  /* transition: width 2s, height 2s, background-color 2s; */
+  transition: all 2s;
+}image.png
+#bandera {
+  width: 200px;
+  height: 200px;
+  background-color:rgb(217, 16, 35);
+  /* transition: width 6s, height 6s, background-color 6s; */
+  transition: 6s;
+  float: left;
+}
+#bandera:hover {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  background-image: linear-gradient(90deg, rgb(217, 16, 35) 33%, white 33%, white 66.66%, rgb(217, 16, 35) 66.66%);
+  transform: translateX(50px) translateY(50px);
+  transition: all 2s;
+  justify-content: center;
+  align-items: center;
+}

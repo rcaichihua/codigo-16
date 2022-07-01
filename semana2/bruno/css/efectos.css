@@ -1,0 +1,52 @@
+body{
+  background-color: rgb(218, 213, 213);
+}
+
+#contenedor{
+  width: 400px;
+  height: 300px;
+  /* background-color: tomato; */
+  /* background: linear-gradient(purple,rgb(179, 107, 179),rgb(222, 198, 222)); */
+  /* background:linear-gradient(to left, rgb(246, 244, 244), rgb(216, 8, 8) 20%, #eee 65%, rgb(233, 6, 6) 60%); */
+  /* background:linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%); */
+  /*background:linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);*/
+background: linear-gradient(to left,rgb(234, 8, 8) 0%, rgb(234, 8, 8) 33.3%,rgb(255, 255, 255) 33.3%,rgb(255, 255, 255) 66.7%,
+rgb(234,8,8) 66.7%, rgb(234, 8, 8) 100%);
+  margin: auto;
+}
+#contenedor:hover{
+  background: linear-gradient(to top, rgb(234, 8, 8) 0%, rgb(234, 8, 8) 33.3%, rgb(255, 255, 255) 33.3%, rgb(255, 255, 255) 66.7%,
+        rgb(234, 8, 8) 66.7%, rgb(234, 8, 8) 100%);
+}
+
+.sombra{
+  /* 1er eje "x" derecha 2do eje "y" (Abajo) 3ro difuminacion 4to Propagacion(spread) 5to color*/
+  box-shadow: 20px 20px 10px -10px purple;
+}
+
+.sombra-texto {
+  /* 1er eje "x" derecha 2do eje "y" (Abajo) 3ro difuminacion 4to color*/
+  text-shadow: 10px 10px 5px  purple;
+  border: 1px black solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#circulo{
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  margin: 60px auto;
+  border-radius: 100%;
+  /* border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%; */
+}
+
+#circulo-grad {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  margin: 60px auto;
+  border-radius: 100%;
+  filter: blur(50px) grayscale(30%);
+}

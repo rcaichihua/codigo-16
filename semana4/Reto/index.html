@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .muy_deficiente {
+        color: red;
+      }
+      .Insuficiente {
+        color: lightcoral;
+      }
+      .suficiente {
+        color: blue;
+      }
+      .bien {
+        color: lightblue;
+      }
+      .notable {
+        color: brown;
+      }
+      .sobresaliente {
+        color: green;
+      }
+      .Indefinido {
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    let nombres = prompt("Ingrese sus nombres:");
+    let genero = prompt("Ingrese su Género Masculino[M] Femenimo[F]:");
+    let edad = prompt("Ingrese su edad:");
+    let nota = prompt("Ingrese su nota:");
+    let resultado_nota = "";
+    let color_nota = "";
+
+    let tipo =
+      edad > 35 && genero == "M"
+        ? "Sr."
+        : edad <= 35 && genero == "M"
+        ? "Joven"
+        : edad >= 50 && genero == "F"
+        ? "Sra."
+        : edad < 50 && genero == "F"
+        ? "Srta."
+        : "";
+
+    switch (!isNaN(nota)) {
+      case nota >= 0 && nota < 3:
+        resultado_nota = "Muy deficiente";
+        color_nota = "muy_deficiente";
+        break;
+      case nota >= 3 && nota < 5:
+        resultado_nota = "Insuficiente";
+        color_nota = "Insuficiente";
+        break;
+        image.png;
+      case nota >= 5 && nota < 6:
+        resultado_nota = "Suficiente";
+        color_nota = "suficiente";
+        break;
+      case nota >= 6 && nota < 7:
+        resultado_nota = "Bien";
+        color_nota = "bien";
+        break;
+      case nota >= 7 && nota < 9:
+        resultado_nota = "Notable";
+        color_nota = "notable";
+        break;
+      case nota >= 9 && nota <= 10:
+        resultado_nota = "Sobresaliente";
+        color_nota = "sobresaliente";
+        break;
+      default:
+        resultado_nota = "Indefinido";
+        color_nota = "Indefinido";
+        break;
+    }
+
+    document.write("<h1>Escala de Notas</h1>");
+    document.write("<hr/>");
+    document.write(
+      "<h2 class = '" +
+        color_nota +
+        "'>" +
+        (genero == "M" ? "El" : "La") +
+        " " +
+        tipo +
+        " " +
+        (nombres.trim().length == 0 ? "Sin Nombre" : nombres.toUpperCase()) +
+        " (" +
+        edad +
+        " años) tiene " +
+        nota +
+        " de nota. " +
+        (resultado_nota == "Bien" ? "Esta" : "Es") +
+        " " +
+        resultado_nota +
+        "</h2>"
+    );
+    document.write("<hr/>");
+  </script>
+</html>

@@ -1,0 +1,31 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bg{
+  border: solid;
+  height: 300px;
+}
+.color-red{
+  background-color: red;
+  /* background-color: red; */
+}
+.color-green{
+  background-color: green;
+}
+
+.bg-img{
+  background: url('../../semana1/images/facebook.png') center;
+  /*contain corta la imagen*/
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bg-img-casa-goku{
+  background: url(../images/goku-house.jpg);
+  /* estamos diciendo que este div tenga un alto de 500px */
+  height: 500px;
+  background-size: cover;
+  /* Esto indica que se muestre la parte central de la imagen */
+  background-position: center;
+  background-repeat: no-repeat;
+}

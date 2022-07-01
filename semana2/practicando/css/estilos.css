@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.caja-1{
+  width: 120px;
+  height: 120px;
+  background-color: skyblue;
+  border: 2px solid black;
+  position: relative;
+  left: 100px;
+}
