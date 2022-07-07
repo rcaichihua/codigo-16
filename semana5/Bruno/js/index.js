@@ -1,37 +1,3 @@
-class Task {
-  constructor(_text) {
-    this.id = "_" + Math.random().toString(36).slice(2);
-    this.text = _text;
-    this.status = "todo"; //done delete
-    this.created_at = new Date();
-    this.done_at = null;
-    this.deleted_at = null;
-  }
-
-  done() {
-    this.status = "done";
-    this.done_at = new Date();
-    document.querySelector("#" + this.id).classList.add("done");
-  }
-
-  delete() {
-    this.status = "delete";
-    this.done_at = new Date();
-    document.querySelector("#" + this.id).classList.add("delete");
-  }
-
-  createElement() {
-    const element = document.createElement("p");
-    element.setAttribute("id", this.id);
-    element.setAttribute("class", "task");
-    element.innerHTML = `
-          <input type="checkbox" onchange="checkTask(this);" />
-          <span>${this.text}</span>
-          <a onclick="deleteTask(this);">❌</a>
-    `;
-    return element;
-  }
-}
 //DOM
 const listTask = document.querySelector("#list");
 const inputTask = document.querySelector("#input_wewtask");
@@ -54,15 +20,85 @@ function addTask() {
 
 function checkTask(checkbox) {
   if (checkbox.checked) {
-    const task_id = checkbox.parentElement.id;
-    const task = arrayTasks.find((task) => task.id == task_id);
-    task.done();
+    parentTask(checkbox).done();
     checkbox.setAttribute("disabled", true);
   }
 }
 
 function deleteTask(anchor) {
-  const task_id = anchor.parentElement.id;
-  const task = arrayTasks.find((task) => task.id == task_id);
-  task.delete();
+  // const task_id = anchor.parentElement.id;
+  // const task = arrayTasks.find((task) => task.id == task_id);
+  parentTask(anchor).delete();
+}
+
+function updateTask(anchor) {
+  const newText = prompt("Ingrese el nuevo nombre de su tarea.");
+  parentTask(anchor).update(newText);
+}
+
+function parentTask(element) {
+  return arrayTasks.find(
+    (task) => task.id == element.parentElement.parentElement.id
+  );
+}
+
+const chxTaskDone = document.querySelector("#chx_task_done");
+const chxTaskDelete = document.querySelector("#chx_task_delete");
+const chxTaskTodo = document.querySelector("#chx_task_todo");
+
+chxTaskDone.onchange = function () {
+  showOrHideElement(this.checked, ".todo", ".delete");
+  //retorna una lista de elementos
+  // const taskTodo = document.querySelectorAll(".todo");
+  // const taskDelete = document.querySelectorAll(".delete");
+  // if (this.checked) {
+  //   //recuerden que taskTodo es una lista de elementos HTML
+  //   taskTodo.forEach((todo) => (todo.style.display = "none"));
+  //   taskDelete.forEach((task) => (task.style.display = "none"));
+  // } else {
+  //   taskTodo.forEach((todo) => (todo.style.display = "block"));
+  //   taskDelete.forEach((task) => (task.style.display = "block"));
+  // }
+};
+chxTaskDelete.onchange = function () {
+  showOrHideElement(this.checked, ".todo", ".done");
+  //retorna una lista de elementos
+  // const taskTodo = document.querySelectorAll(".todo");
+  // const taskDone = document.querySelectorAll(".done");
+  // if (this.checked) {
+  //   //recuerden que taskTodo es una lista de elementos HTML
+  //   taskTodo.forEach((todo) => (todo.style.display = "none"));
+  //   taskDone.forEach((task) => (task.style.display = "none"));
+  // } else {
+  //   taskTodo.forEach((todo) => (todo.style.display = "block"));
+  //   taskDone.forEach((task) => (task.style.display = "block"));
+  // }
+};
+chxTaskTodo.onchange = function () {
+  showOrHideElement(this.checked, ".delete", ".done");
+  //retorna una lista de elementos
+  // const taskDelete = document.querySelectorAll(".delete");
+  // const taskDone = document.querySelectorAll(".done");
+  // if (this.checked) {
+  //   //recuerden que taskTodo es una lista de elementos HTML
+  //   taskDone.forEach((done) => (done.style.display = "none"));
+  //   taskDelete.forEach((task) => (task.style.display = "none"));
+  // } else {
+  //   taskDone.forEach((done) => (done.style.display = "block"));
+  //   taskDelete.forEach((task) => (task.style.display = "block"));
+  // }
+};
+
+function showOrHideElement(checked, typeOne, TypeTwo) {
+  const elementsOne = document.querySelectorAll(typeOne);
+  const elementsTwo = document.querySelectorAll(TypeTwo);
+
+  if (checked) {
+    //recuerden que taskTodo es una lista de elementos HTML
+    elementsOne.forEach((todo) => (todo.style.display = "none"));
+    elementsTwo.forEach((task) => (task.style.display = "none"));
+  } else {
+    elementsOne.forEach((todo) => (todo.style.display = "block"));
+    elementsTwo.forEach((task) => (task.style.display = "block"));
+  }
 }

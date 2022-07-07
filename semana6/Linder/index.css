@@ -1,0 +1,15 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text-error {
+  color: red;
+  display: none;
+}
+.text-error-email {
+  color: red;
+  display: none;
+}
+#input-email {
+  border-color: red;
+  outline: none;
+}

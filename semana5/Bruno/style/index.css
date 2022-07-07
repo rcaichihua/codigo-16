@@ -17,10 +17,12 @@
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 .task > a {
   font-size: 0.8rem;
-  float: right;
+  /* float: right; */
 }
 .task > input {
   transform: scale(1.3);
@@ -41,10 +43,10 @@
 .done:hover {
   background-color: #338dad;
 }
-.delete > input {
+.delete > div > input {
   display: none;
 }
-.delete > span {
+.delete > div > span {
   margin-left: 30px;
   color: #aaa;
   font-style: italic;
@@ -75,4 +77,8 @@
 }
 .form > input[type="button"]:hover {
   background-color: #ddd;
+}
+#settings {
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
