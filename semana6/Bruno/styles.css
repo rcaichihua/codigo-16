@@ -3,6 +3,7 @@
     "Lucida Sans", Arial, sans-serif;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -13,8 +14,8 @@ body {
   /* background-color: rgba(0, 0, 0, 0.5); */
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  position: relative;
+  /* height: 100vh;
+  position: relative; */
 }
 
 .lost_container {
@@ -48,33 +49,42 @@ body {
 #container {
   width: 600px;
   margin: 30px auto;
-  position: absolute;
+  /* position: absolute; */
   /* z-index: -1; */
 }
+
 input {
   height: 40px;
   border-radius: 10px;
   font-size: 1.1rem;
 }
+
 input[type="text"] {
   border: 1px solid #ddd;
   padding: 10px;
 }
-input[type="button"] {
+
+.start {
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
   background-color: #0065b2;
-  border-color: #0065b2;
+  border: 1px solid #0065b2;
   color: white;
   cursor: pointer;
 }
-input[type="button"]:hover {
+
+.start:hover {
   background-color: #003762;
   border-color: #003762;
 }
-input[type="button"]:disabled {
+
+.start:disabled {
   background-color: #ddd;
   border-color: #ddd;
   cursor: not-allowed;
 }
+
 /*Player*/
 #player {
   border: 1px dashed #ddd;
@@ -84,17 +94,21 @@ input[type="button"]:disabled {
   flex-wrap: wrap;
   gap: 10px;
 }
+
 #player > input[type="text"] {
   flex-grow: 2;
 }
+
 #player > input[type="button"] {
   flex-grow: 1;
 }
+
 #player > h2 {
   width: 100%;
   text-align: center;
   display: none;
 }
+
 /*Game*/
 #game {
   margin-top: 20px;
@@ -105,17 +119,20 @@ input[type="button"]:disabled {
   flex-direction: column;
   align-items: center;
 }
+
 #game > input {
   width: 10%;
   text-align: center;
   font-size: 2rem;
 }
+
 #game > span {
   margin: 10px auto;
   font-size: 2rem;
-  max-width: 80%;
+  max-width: 75%;
   overflow-wrap: break-word;
 }
+
 #score {
   margin-top: 20px;
   border: 1px dashed #ddd;
@@ -124,12 +141,37 @@ input[type="button"]:disabled {
   display: block;
   text-align: center;
 }
+
 #h3_correctattempts {
   color: green;
 }
+
 #h3_failedattempts {
   color: red;
 }
+
 #h3_score {
   color: blue;
+}
+
+/*HISTORY*/
+table {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px #ddd solid;
+}
+
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px #ddd solid;
+}
+
+input {
+  margin-top: 10px;
 }
